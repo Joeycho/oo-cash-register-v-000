@@ -19,7 +19,10 @@ class CashRegister
     #binding.pry
   end
 
-  def apply_discount
 
+
+  def apply_discount
+    @total = @total*@discount
+    return "After the discount, the total comes to $#{@total}."
   end
 end
