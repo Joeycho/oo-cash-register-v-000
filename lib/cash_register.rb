@@ -10,9 +10,9 @@ class CashRegister
     @total = 0
     @discount = discount
   end
-  
+
   def add_item(title, price, quantities=1)
-    
+
     quantities.times do
     @items << title
     end
