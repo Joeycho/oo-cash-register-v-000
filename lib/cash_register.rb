@@ -5,6 +5,8 @@ class CashRegister
   attr_accessor :discount
   attr_accessor :items
 
+  attr_accessor :price
+  attr_accessor :quantities
 
   def initialize(discount=0)
     @total = 0
@@ -18,11 +20,13 @@ class CashRegister
     @items << title
     end
     @total += price*quantities
+    @price = price
+    @quantities = quantities
     #binding.pry
   end
 
   def void_last_transaction
-
+    @price -=@price*@quantities
   end
 
 
