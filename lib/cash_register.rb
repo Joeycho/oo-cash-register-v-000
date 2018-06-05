@@ -22,10 +22,11 @@ class CashRegister
 
 
   def apply_discount
-    distotal = @total*(100-@discount)/100
+      distotal = @total*(100-@discount)/100
     if distotal != @total
-    return "After the discount, the total comes to $#{distotal}."
+      return "After the discount, the total comes to $#{distotal}."
     else
-    return "There is no discount to apply"
+      return "There is no discount to apply"
     end
-end
+  end
+
