@@ -10,12 +10,12 @@ class CashRegister
     @discount = discount
   end
 
-  def add_item(title, price, quantities=0)
+  def add_item(title, price, quantities=1)
     @items =[]
     item = {:title=>title, :price=>price, :quantities=>quantities}
 
     @items << item
-    @total += price
+    @total += price*quantities
     #binding.pry
   end
 
