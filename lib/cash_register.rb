@@ -15,7 +15,7 @@ class CashRegister
     item = {:title=>title, :price=>price, :quantities=>quantities}
 
     @items << item
-    @total += quantities*price
+    @total += price
     binding.pry
   end
 
